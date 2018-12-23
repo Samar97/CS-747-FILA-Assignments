@@ -1,0 +1,21 @@
+150100017
+Samarjeet Sahoo
+Computer Science and Engineering
+
+I used a Model based method to solve the problem.
+
+Firstly, I estimated the Transition and the Reward Functions for different (s,a,s') values using the values obtained from the episode's data. I maintain a count of the number of occurences of state action and reward triplets and in the end divide by the sum of counts for the (s,a) pair to get the fraction of occurrences which are the corresponding probabilities. The code is commented in case the detailed steps are required.
+
+Then, once I had the estimates of the transition and the reward functions, I used Value Iteration by applying Bellman's operator repeatedly to solve for the V values according to the given policy. The application of bellman's operator takes into account the stochasticity of the policy, if any, by multiplying the fraction of occurrences of the s,a pair with the Q(s,a) value for the state. The weighted sum of the Q(s,a) value gives the value function according to stochastic policy. In case of a deterministic policy the weights become exactly 1.0 for the deterministic action.
+
+Reasons: A model based method does not require adjusting parameters, which means that it behaves similarly for all MDP examples.
+I did try model free methods like TD-0 and TD-Lambda, (which is given in valfunallmethods.py along with the submission and is not called in evaluator.sh) but the values depended hugely on the values of the hyper parameters, lambda and learning rate and did not inspire confidence that they would give good estimates for all MDPs (the values of the free parameters were tuned using d1 and d2.txt)
+Hence, I felt that a model based methods, being free from free parameters can be expected to work for the general MDPs.
+
+I have also taken into account stochastic policies in my model based method.
+I have commented the code(valfun.py) well enough in case the details are required.
+
+Though the values can be calculated separately, here are the values on the given d1 and d2 data files, just in case the values are required here for reference
+
+Squared Error for d1 -> 0.0136
+Squared Error for d2 -> 0.0000172

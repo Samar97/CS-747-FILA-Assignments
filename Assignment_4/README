@@ -1,0 +1,5 @@
+To gather the data and plot the graphs of the data, just run gatherData.sh as follows (only one command):
+
+./gatherData.sh
+
+After this command, the data files containing the average cumulative no. of steps taken for each episode are generated as normal, king and stochastic for the corresponding cases. The graphs are automatically plotted from these data. There is no need to run anything else. Just the one line command given. Note that 4 graphs are generated -  3 graphs, each showing the individual case and the 4th graph has all the plots in one graph.

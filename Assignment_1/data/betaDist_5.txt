@@ -1,0 +1,6 @@
+betaDistribution
+5 5
+1 2
+12 56
+13 11
+14 17

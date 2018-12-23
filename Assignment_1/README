@@ -1,0 +1,7 @@
+1.First, install libgsl for GNU scientific library referred to in the programs
+	Command used : sudo apt-get install libgsl-dev
+2.Then, just run make in the client and the server folders to get the relevant .o files for the server and the client
+	Command used : ./client -> make
+				 : ./server -> make
+3.Then, run startexperiment.sh to run the server and the client making up the bandit simulation
+	Command used : . ->  ./startexperiment.sh
